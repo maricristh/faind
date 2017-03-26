@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">LoginEstudo</string>
+    <string name="lbl_cadastre">Cadastre-se</string>
+    <string name="lbl_esqueceu_senha">Esqueceu sua senha?</string>
+    <string name="lbl_btn_novo_item">Novo ítem</string>
+    <string name="lbl_novo_item">Novo Item</string>
+    <string name="lbl_achados">Achados</string>
+    <string name="lbl_perdidos">Perdidos</string>
+    <string name="lbl_lista_achados">Lista de itens achados</string>
+    <string name="lbl_nome">Nome</string>
+</resources>
