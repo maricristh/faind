@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">LoginEstudo</string>
+    <string name="app_name">Achados e perdidos</string>
     <string name="lbl_cadastre">Cadastre-se</string>
     <string name="lbl_esqueceu_senha">Esqueceu sua senha?</string>
     <string name="lbl_btn_novo_item">Novo ítem</string>
@@ -8,4 +8,24 @@
     <string name="lbl_perdidos">Perdidos</string>
     <string name="lbl_lista_achados">Lista de itens achados</string>
     <string name="lbl_nome">Nome</string>
+    <string name="lbl_tela_inicial">Tela inicial</string>
+    <string name="lbl_editar_perfil">Editar perfil</string>
+    <string name="lbl_sobre_nos">Sobre nós</string>
+    <string name="lbl_ajuda">Ajuda</string>
+    <string name="lbl_lista_perdidos">Lista de perdidos</string>
+    <string name="lbl_cadastrar_item">Cadastrar novo item</string>
+    <string name="lbl_voltar_menu">Voltar ao menu</string>
+    <string name="lbl_senha">Senha</string>
+    <string name="lbl_email">Email</string>
+    <string name="lbl_cidade">Cidade</string>
+    <string name="lbl_cancelar">Cancelar</string>
+    <string name="lbl_entre_em_contato">Entre em contato</string>
+    <string name="lbl_texto_ajuda">Seja bem vindo ao nosso sistema!
+        Como usar o aplicativo de achados e perdidos  Nosso aplicativo funciona de tem como objetivo auxiliar pessoas a encontrarem objetos perdidos na cidade de Indaiatuba. Na tela inicial é possível ver um mapa com os itens (achados e perdidos) cadastrados em nosso sistema.  Para visualizar a listagem de itens de cada sessão pode ser selecionado a listagem na tela inicial do sistema, a listagem também pode ser encontrada no menu de opções, quando selecionado um item, será possível obter o meio de contato do anunciante.  É possível cadastrar itens, a função de cadastrp, assim como a listagem, pode ser encontrada na tela inicial e no menu de funções, após selecionada o usuários deverá preencher os campos de registro do item e selecionar cadastrar. Após o cadastro ser realizado, o item terá que ser aprovado pelo moderador do sistema, e poderá ser conferido na sessão de listagem de itens.</string>
+    <string name="lbl_txt_quem_somos_nos">Seja bem vindo ao nosso sistema!
+        Trabalho de Graduação apresentado por Mariane Theodoro como pré-requisito parcial para a conclusão do Curso Superior de Tecnologia em Análise e Desenvolvimento de Sistemas, da Faculdade de Tecnologia de Indaiatuba. Orientação da Prof. Janaíne Arantes. Ainda contando com a colaboração e apoio de Vinícius Silva no seu desenvolvimento.</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="lbl_ocorrido_em">Ocorrido em: %1$s</string>
+    <string name="alertCarregandoDados">Carregado dados...</string>
+    <string name="spinnerOpcoesTitulo">Opções</string>
 </resources>

@@ -1,0 +1,28 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/customdialog"
+    android:layout_width="fill_parent"
+    android:layout_height="500dp"
+    android:background="@color/White"
+    android:minWidth="400dp">
+
+    <TextView
+        android:id="@+id/titulo"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:padding="16dp"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:textColor="@color/White"
+        android:background="@color/BlueBaby2"/>
+
+    <ListView
+        android:id="@+id/lista"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_below="@+id/titulo"
+        android:layout_weight="1"
+        android:divider="@color/White10Black"
+        android:dividerHeight="0000.5dp"/>
+
+</RelativeLayout>

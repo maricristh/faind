@@ -2,6 +2,7 @@ package com.example.mahri.loginestudo;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.AsyncTask;
@@ -11,6 +12,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+/*
+falta criar o atualizar perfil
+ */
 
 import java.io.IOException;
 
@@ -37,14 +41,22 @@ public class TelaLogin extends AppCompatActivity {
         //vamos criar o evento para txtcadastro lol
         //quando clica no botao, abre a outra tela
 
-        btnCadastre.setOnClickListener(new View.OnClickListener(){
+        btnCadastre.setOnClickListener(new View.OnClickListener() {
             @Override
+            public void onClick(View v) {
+                Intent meuIntent = new Intent(TelaLogin.this, TelaCadastro.class);
+                startActivityForResult(meuIntent, 1);
+                finish();
+            }
+        });
+
+        /*  @Override - código trocado tentando arrumar a porcaria do btnCancelar .-.
             public void onClick(View v){
                 Intent abreCadastro = new Intent(TelaLogin.this, TelaCadastro.class);
                 startActivity(abreCadastro);
                 finish();
             }
-        });
+        });*/
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -85,8 +97,17 @@ public class TelaLogin extends AppCompatActivity {
         protected void onPostExecute (String resultado){
            //edtUsuario.setText(resultado);
             Toast.makeText(TelaLogin.this, "resultado"+ resultado, Toast.LENGTH_LONG).show();
-            if (resultado.equals("LOGIN_OK")){
+            if (!resultado.equals("")){
                 Intent abreInicio = new Intent(TelaLogin.this, TelaInicial.class);
+
+                //adicionei essa parte pra permitir adicionar o painel de meus itens - pega o Id do usuário
+                SharedPreferences settings = getSharedPreferences("dados", 0);
+                SharedPreferences.Editor editor = settings.edit();
+                editor.putString("usuario", resultado);
+
+                // Commit the edits! - by Vini
+                editor.apply();
+                //final do trecho de código adicionado pra obter o usuario (painel de meus itens)..
                 startActivity(abreInicio);
                 finish();
             } else{

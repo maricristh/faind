@@ -1,15 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_tela_cadastro_item"
+    android:id="@+id/activity_tela_lista_item"
     android:layout_width="match_parent"
+    android:orientation="vertical"
     android:layout_height="match_parent"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.mahri.loginestudo.TelaCadastroItem"
-    android:orientation="vertical">
+    tools:context="com.example.mahri.loginestudo.TelaListaItem">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/LinearFoto">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            app:srcCompat="@android:drawable/ic_menu_gallery"
+            android:id="@+id/imageView2"
+            android:layout_weight="1"
+            android:layout_height="130dp" />
+    </LinearLayout>
 
     <LinearLayout
         android:orientation="horizontal"
@@ -21,70 +36,68 @@
             android:text="Tipo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/txtTipoItem"
+            android:id="@+id/txtTipo"
             android:layout_weight="1" />
 
-        <Spinner
+        <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/spnTipoItem"
-            android:layout_weight="1" />
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/edtTipo"
+            android:layout_weight="0.65" />
 
     </LinearLayout>
 
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:id="@+id/LinearNome">
+        android:layout_height="wrap_content">
 
         <TextView
             android:text="Nome"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/textView2"
+            android:id="@+id/txtNome"
             android:layout_weight="1" />
 
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
-            android:text="Name"
             android:ems="10"
-            android:id="@+id/editText2"
+            android:id="@+id/edtNome"
             android:layout_weight="1" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1">
-
-        <TextView
-            android:text="Descricao"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/textView3"
-            android:layout_weight="1" />
-
-        <EditText
-            android:layout_width="295dp"
-            android:layout_height="match_parent"
-            android:inputType="textPersonName"
-            android:text="Texto aqui"
-            android:ems="10"
-            android:id="@+id/editText3" />
 
     </LinearLayout>
 
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1">
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="Descrição"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtDescricao"
+            android:layout_weight="1"
+            android:textAlignment="textStart" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/edtDescricao"
+            android:layout_weight="1.64" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
         <TextView
             android:text="Local"
@@ -97,35 +110,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
-            android:text="Name"
             android:ems="10"
             android:id="@+id/edtLocal"
-            android:layout_weight="1" />
-
+            android:layout_weight="0.83" />
     </LinearLayout>
 
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="0.20">
-
-        <Button
-            android:text="Adicionar foto"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/button2"
-            android:layout_weight="1" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1">
+        android:layout_height="wrap_content">
 
         <TextView
-            android:text="Palavras chave"
+            android:text="Palavras-chave"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/txtPalavrasChave"
@@ -135,32 +131,28 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
-            android:text="Achados; perdido "
             android:ems="10"
-            android:id="@+id/editText5"
+            android:id="@+id/edtPalavraChave"
             android:layout_weight="1" />
-
     </LinearLayout>
 
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1">
+        android:layout_height="wrap_content">
 
         <Button
-            android:text="Cancelar"
+            android:text="Voltar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/btnCancelar"
+            android:id="@+id/btnVoltar"
             android:layout_weight="1" />
 
         <Button
-            android:text="Cadastrar"
+            android:text="Contato"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/btnCadastrar"
+            android:id="@+id/btnContato"
             android:layout_weight="1" />
     </LinearLayout>
-
 </LinearLayout>

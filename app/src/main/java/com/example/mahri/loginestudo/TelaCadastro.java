@@ -11,8 +11,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 
 /**
  * Created by mahri on 07/03/2017.
@@ -36,13 +34,33 @@ import android.support.v7.app.AppCompatActivity;
         edtSenha  = (EditText)findViewById(R.id.edtSenha);
         editCidade = (EditText)findViewById(R.id.editCidade);
         btnCancelar = (Button)findViewById(R.id.btnCancelar);
-        btnCadastrar = (Button)findViewById(R.id.btnCadastrar);
+        btnCadastrar = (Button)findViewById(R.id.btnCadastrarItem);
 
         btnCancelar.setOnClickListener(new View.OnClickListener() {
+
+           /* public void onClick (View v) {
+
+                Intent intent = new Intent();
+                intent.setAction(Intent.ACTION_MAIN);
+                intent.addCategory(Intent.CATEGORY_HOME);
+
+                startActivity();
+
+                return;
+            }
+            */
+            /*@Override
+            public void onClick(View v) {
+                Intent intent = new Intent();
+                setResult(1, intent);
+                finish();
+            } */
             @Override
             public void onClick(View v) {
-                finish();
+                Intent abreTelaInicial = new Intent(TelaCadastro.this, TelaLogin.class);
+                startActivity(abreTelaInicial);
             }
+
         });
         btnCadastrar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -72,7 +90,7 @@ import android.support.v7.app.AppCompatActivity;
             }
         });
     }
-
+ //no cadastro de item parei nessa parte....
     private class SolicitaDados extends AsyncTask<String, Void, String> {
         @Override
         protected String doInBackground(String... urls) {
@@ -93,12 +111,10 @@ import android.support.v7.app.AppCompatActivity;
                 startActivity(abreInicio);
 
             } else{
-                Toast.makeText(getApplicationContext(), "Ocorreu um erro", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "Sucesso", Toast.LENGTH_SHORT).show();
             }
 
         }
     }
-    protected void onPause() {
-        finish();
-    }
+   //protected void onPause() {finish(); }
 }

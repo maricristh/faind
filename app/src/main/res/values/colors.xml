@@ -3,4 +3,9 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="GreyLight">#B6B6B6</color>
+    <color name="White">#FFFFFF</color>
+    <color name="White20Black">#CDCDCD</color>// White with 20% black
+    <color name="White10Black">#E6E6E6</color>// White with 10% black
+    <color name="BlueBaby2">#44a1a9</color>
 </resources>
